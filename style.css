@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 li{
     list-style: none;
@@ -14,16 +14,16 @@ a{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 30px 50px;
     height: 70px;
     align-items: center;
 }
 .logo{
-    flex: 1;
+    flex: 2;
 }
 
 .menu {
-flex: 3;
+flex: 4;
 display: flex;
 }
 .menu >li {
@@ -35,23 +35,24 @@ display: flex;
     top: 30px;
 }
 .sub-menu {
+    background-color:rgb(228, 252, 173);
     position: absolute;
-    width: 150px;
-    border: 1px solid #ccc;
-    padding: 10px 0 10px 20px;
+    width: 200px;
+    border: 1px solid #ffdfdf;
+    padding: 10px 20px 10px 20px;
     visibility: hidden;
-    top: 50px;
+    top: 30px;
     transition: 0.3s;
 }
 .sub-menu ul{
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .sub-menu ul a {
     font-weight: normal!important;
     font-size: 12px!important;
 }
 .menu li a{
-      font-size: 12px;
+      font-size: 15px;
       font-weight: bold!important;
       display: block;
       line-height: 20px;
@@ -68,7 +69,7 @@ display: flex;
     position: relative;
 }
 .others > li:first-child input{
-    width: 100%;
+    width: 50x;
     border: none;
     border-bottom: 1px solid;
 }
@@ -78,13 +79,10 @@ display: flex;
 }
 .aspect-ratio-169 {
     display: block;
-    position: relative;
-    padding-top: 56.25%;
   }
   
   .aspect-ratio-169 img {
     display: block;
-    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
