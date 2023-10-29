@@ -88,11 +88,16 @@ display: flex;
     top: 0;
     left: 0;
   }
-#footer{
-    padding: 40px 40px;
-    background-color: rgb(255, 101, 96);
+#footer{  
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background: url('elynas-footer-bgr.png');
+    background-size: cover;
+    background-color: rgb(255, 101, 96) ;
 }
 .contactBySocialMedia{
+ 
     display: block;
 }
 .contactBySocialMedia ul{
@@ -100,7 +105,7 @@ display: flex;
     display: flex;
 }
 .contactBySocialMedia ul li{
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .contactBySocialMedia ul li a{
     display: block;
