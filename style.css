@@ -88,3 +88,23 @@ display: flex;
     top: 0;
     left: 0;
   }
+#footer{
+    padding: 40px 40px;
+    background-color: rgb(255, 101, 96);
+}
+.contactBySocialMedia{
+    display: block;
+}
+.contactBySocialMedia ul{
+    justify-items: center;
+    display: flex;
+}
+.contactBySocialMedia ul li{
+    margin-right: 10px;
+}
+.contactBySocialMedia ul li a{
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
