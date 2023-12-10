@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vn">
+  
+<head>
+    <meta charset="UTF+8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elynas - ADMIN</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">GIAO DIỆN ADMIN</a>
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang<br> Chủ</a></li>
+            <li><a href="1-qlmenu.html">Quản Lý<br> Sản Phẩm</a></li>
+            <li><a href="1-qluser.html">Quản Lý<br> Người Dùng</a></li>
+            <li><a href="1-qlshoppingcart.html">Quản Lý<br> Đơn Hàng</a></li>
+            <li><a href="1-qlbusiness.html">Quản Lý<br> Kinh Doanh</a></li>
+        </div>
+        <div class="others">
+            <li><a href="1-signin.html" id="getusername">Đăng Nhập</a></li>
+            <button id="signoutbutton" style="display: none; border: none; background: transparent; font-style: italic;" onclick="signout()">Đăng Xuất</button>
+            
+        </div>
+    </header>
+
+
+    <main>
+        <div class="signup">
+            <h2 class="signup-heading">ĐĂNG KÝ</h2>
+            <div class="signup-input">
+                <input type="text" class="signup-username" placeholder="Tên đăng nhập">
+            </div>
+            <div class="signup-input">
+                <input type="password" class="signup-password" placeholder="Mật khẩu">
+            </div>
+            <div class="signup-signin">
+                <a href="1-signin.html">Đăng Nhập</a>
+            </div>     
+            <button type="submit" class="signup-button">Đăng Ký</button>
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="footer">
+            
+            <div class="contactBySocialMedia">
+                <a>Contact us by :</a>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100082839331339" target="_blank"><i><img width="40px" height="40px" src="icon-facebook.png"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCdvAt-M9xRWo4yNJK8S5CKw"target="_blank"><i><img width="40px" height="40px" src="icon-youtube.png"></i></a></li>
+                    <li><a href="https://www.instagram.com/__tienminh.0112__/" target="_blank"><i><img width="40px" height="40px" src="icon-instagram.png"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactByCall">
+                <a href="tel:9031849810">
+                    <i><img width="15px" height="15px" src="icon-call.png"></i>
+                    <span data-class="phone_contact_i" class="link_footer phone_contact_tem color-phone-contact contenteditable" > 0931849810 </span>
+                </a>
+            </div>
+            <div class="contactByMail">
+                <a href="mailto:tienminh.0112.lynn@gmail.com">
+                   <i><img width="15px" height="15px" src="icon-mail.png"></i>
+                   <span data-class="email_contact_i" class="link_footer2 email_contact_tem color-email-contact contenteditable" > tienminh.0112.lynn@gmail.com </span>
+                </a>
+            </div>
+            <div class="copyRight">© 2023 Elynas. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const signupusername = document.querySelector(".signup-username");
+    const signuppassword = document.querySelector(".signup-password");
+    const signupbutton = document.querySelector(".signup-button");
+    signupbutton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if ( signupusername.value === "" || signuppassword.value === "" ) 
+        {
+            alert("vui lòng không để trống");
+        } else 
+        {
+            const userAdmin = {
+                username: signupusername.value,
+                password: signuppassword.value,
+            };
+            let json = JSON.stringify(userAdmin);
+            localStorage.setItem(signupusername.value, json);
+            alert("Đăng ký thành công");
+            window.location.href = "1-signin.html";
+        }
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vn">
+  
+<head>
+    <meta charset="UTF+8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elynas - ADMIN</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">GIAO DIỆN ADMIN</a>
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang<br> Chủ</a></li>
+            <li><a href="1-qlmenu.html">Quản Lý<br> Sản Phẩm</a></li>
+            <li><a href="1-qluser.html">Quản Lý<br> Người Dùng</a></li>
+            <li><a href="1-qlshoppingcart.html">Quản Lý<br> Đơn Hàng</a></li>
+            <li><a href="1-qlbusiness.html">Quản Lý<br> Kinh Doanh</a></li>
+        </div>
+        <div class="others">
+            <li><a href="1-signin.html" id="getusername">Đăng Nhập</a></li>
+            <button id="signoutbutton" style="display: none; border: none; background: transparent; font-style: italic;" onclick="signout()">Đăng Xuất</button>
+            
+        </div>
+    </header>
+
+
+    <main>
+        <section class="cartegory">
+            <div class="container">
+                <div class="cartegory-top row">
+                    <a href="index.html"><p>Trang Chủ</p></a><span>&#62;</span><a href="1-qlbusiness.html"><p>Quản Lý Kinh Doanh</p></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="cartegory-left">
+                        <ul>
+                            <li class="cartegory-left-li"><a href="1-qlmenu.html">Quản Lý Sản Phẩm</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qluser.html">Quản Lý Người Dùng</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qlshoppingcart.html">Quản Lý Đơn Hàng</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qlbusiness.html">Quản Lý Kinh Doanh</a></li>
+                        </ul>
+                    </div>
+                    <div class="cartegory-right row">
+                        <div class="cartegory-right-top-item">
+                            <div>
+                                <p>Quản lý tình hình kinh doanh</p>
+                            </div>
+                            <div class="infomation">
+                                <div class="item"><span>Doanh thu trong tháng:</span> <a>61.425.000đ</a></div>
+                                <div class="item"><span>Lượt truy cập trong tháng:</span> <a>3.852 lượt</a></div>
+                                <div class="item"><span>Đơn hàng trong tháng:</span> <a>642 đơn</a></div>
+                                <div class="item"><span>Đánh giá của khách hàng:</span> <a>4.6 sao</a></div>
+                                <div class="item"><span>Lợi nhuận tính tới hiện tại:</span> <a>543.475.000đ</a></div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+    <footer>
+        <div id="footer">
+            
+            <div class="contactBySocialMedia">
+                <a>Contact us by :</a>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100082839331339" target="_blank"><i><img width="40px" height="40px" src="icon-facebook.png"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCdvAt-M9xRWo4yNJK8S5CKw"target="_blank"><i><img width="40px" height="40px" src="icon-youtube.png"></i></a></li>
+                    <li><a href="https://www.instagram.com/__tienminh.0112__/" target="_blank"><i><img width="40px" height="40px" src="icon-instagram.png"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactByCall">
+                <a href="tel:9031849810">
+                    <i><img width="15px" height="15px" src="icon-call.png"></i>
+                    <span data-class="phone_contact_i" class="link_footer phone_contact_tem color-phone-contact contenteditable"> 0931849810 </span>
+                </a>
+            </div>
+            <div class="contactByMail">
+                <a href="mailto:tienminh.0112.lynn@gmail.com">
+                   <i><img width="15px" height="15px" src="icon-mail.png"></i>
+                   <span data-class="email_contact_i" class="link_footer2 email_contact_tem color-email-contact contenteditable"> tienminh.0112.lynn@gmail.com </span>
+                </a>
+            </div>
+            <div class="copyRight">© 2023 Elynas. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+
+const itemslidebar = document.querySelectorAll(".cartegory-left-li")
+itemslidebar.forEach(function(menu,index){
+    menu.addEventListener("click",function(){
+    menu.classList.toggle("block")
+    })
+})
+var userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
+    if (userAdmin && userAdmin.username) 
+    {
+        document.getElementById('getusername').textContent = 'Xin chào, ' + userAdmin.username + '!';
+        document.getElementById('getusername').removeAttribute('href');
+        document.getElementById('signoutbutton').style.display = 'block';
+    }
+
+
+    function signout() {
+        localStorage.removeItem('userAdmin');
+        document.getElementById('signoutbutton').style.display = 'none';
+        document.getElementById('getusername').textContent = 'Đăng Nhập';
+        document.getElementById('getusername').href = '1-signin.html';
+        window.location.href = '1-signin.html';
+    }
+
+    function checksignin() {
+    const userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
+    return userAdmin !== null;
+}
+
+</script>
+
+</html>

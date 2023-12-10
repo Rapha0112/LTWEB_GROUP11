@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vn">
+  
+<head>
+    <meta charset="UTF+8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elynas - ADMIN</title>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">GIAO DIỆN ADMIN</a>
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang<br> Chủ</a></li>
+            <li><a href="1-qlmenu.html">Quản Lý<br> Sản Phẩm</a></li>
+            <li><a href="1-qluser.html">Quản Lý<br> Người Dùng</a></li>
+            <li><a href="1-qlshoppingcart.html">Quản Lý<br> Đơn Hàng</a></li>
+            <li><a href="1-qlbusiness.html">Quản Lý<br> Kinh Doanh</a></li>
+        </div>
+        <div class="others">
+            <li><input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm">
+                <button id="searchButton" onclick="searchSP()">Tìm kiếm</button>
+            </li>
+            <li><a href="1-signin.html" id="getusername">Đăng Nhập</a></li>
+            <button id="signoutbutton" style="display: none; border: none; background: transparent; font-style: italic;" onclick="signout()">Đăng Xuất</button>
+            
+        </div>
+    </header>
+
+
+    <main>
+        <section class="cartegory">
+            <div class="container">
+                <div class="cartegory-top row">
+                    <a href="index.html"><p>Trang Chủ</p></a><span>&#62;</span><a href="1-qlmenu.html"><p>Quản Lý Sản Phẩm</p></a><span>&#62;</span><a href="3-menu-3-1.html"><p>Sinh Tố Dâu</p></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="cartegory-left">
+                        <ul>
+                            <li class="cartegory-left-li"><a href="1-qlmenu.html">Quản Lý Sản Phẩm</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qluser.html">Quản Lý Người Dùng</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qlshoppingcart.html">Quản Lý Đơn Hàng</a>
+                            </li>
+                            <li class="cartegory-left-li"><a href="1-qlbusiness.html">Quản Lý Kinh Doanh</a></li>
+                        </ul>
+                    </div>
+                    <div class="cartegory-right row">
+                        <div class="menuchitiet row">
+                            <div class="menuchitiet-left">
+                                <div class="menuchitiet-left-img">
+                                    <img src="menu-3-1.png">
+                                </div>
+                            </div>
+                            <div class="menuchitiet-right">
+                                <div class="menuchitiet-right-name">
+                                    <h1>Sinh Tố Dâu</h1>
+                                    <p>Mã SP: 301</p>
+                                </div> 
+                                <div class="menuchitiet-right-price">
+                                    <a style="font-weight: bold;">Giá:</a>
+                                    <a style="font-style: italic; text-decoration:underline ;">30.000đ</a>
+                                </div>
+                                <div class="menuchitiet-right-bottom">
+                                    <div class="menuchitiet-right-bottom-top">                            
+                                        <p style="font-size: 15px;" >Giới Thiệu:</p>                        
+                                    </div>                             
+                                    <div  class="menuchitiet-gioithieu">
+                                        Sinh Tố Dâu là sự hòa quyện mát lạnh của những trái dâu tươi mát cùng sua chua và một ít đá lạnh.
+                                        Sẽ mang đến cho bạn một trả nghiệm vị giác vô cùng tuyệt vời. 
+                                    </div>
+                                </div>
+                                <div class="menuchitiet-right-button">
+                                    <button onclick="window.location.href='7-edit-3-1.html'"><p>Chỉnh Sửa</p></button>
+                                    <button onclick="remove()"><p>Xóa</p></button>
+                                </div>                                                            
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer">
+            
+            <div class="contactBySocialMedia">
+                <a>Contact us by :</a>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100082839331339" target="_blank"><i><img width="40px" height="40px" src="icon-facebook.png"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCdvAt-M9xRWo4yNJK8S5CKw"target="_blank"><i><img width="40px" height="40px" src="icon-youtube.png"></i></a></li>
+                    <li><a href="https://www.instagram.com/__tienminh.0112__/" target="_blank"><i><img width="40px" height="40px" src="icon-instagram.png"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactByCall">
+                <a href="tel:9031849810">
+                    <i><img width="15px" height="15px" src="icon-call.png"></i>
+                    <span data-class="phone_contact_i" class="link_footer phone_contact_tem color-phone-contact contenteditable"> 0931849810 </span>
+                </a>
+            </div>
+            <div class="contactByMail">
+                <a href="mailto:tienminh.0112.lynn@gmail.com">
+                   <i><img width="15px" height="15px" src="icon-mail.png"></i>
+                   <span data-class="email_contact_i" class="link_footer2 email_contact_tem color-email-contact contenteditable"> tienminh.0112.lynn@gmail.com </span>
+                </a>
+            </div>
+            <div class="copyRight">© 2023 Elynas. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+
+const itemslidebar = document.querySelectorAll(".cartegory-left-li")
+itemslidebar.forEach(function(menu,index){
+    menu.addEventListener("click",function(){
+    menu.classList.toggle("block")
+    })
+})
+var userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
+    if (userAdmin && userAdmin.username) 
+    {
+        document.getElementById('getusername').textContent = 'Xin chào, ' + userAdmin.username + '!';
+        document.getElementById('getusername').removeAttribute('href');
+        document.getElementById('signoutbutton').style.display = 'block';
+    }
+
+
+    function signout() {
+        localStorage.removeItem('userAdmin');
+        document.getElementById('signoutbutton').style.display = 'none';
+        document.getElementById('getusername').textContent = 'Đăng Nhập';
+        document.getElementById('getusername').href = '1-signin.html';
+        window.location.href = '1-signin.html';
+    }
+
+    function checksignin() {
+    const userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
+    return userAdmin !== null;
+}
+    function remove() {
+        if (checksignin()) {
+            var t = confirm("Bạn chắc chắn muốn xóa sản phẩm này?");
+            if (t == true) {
+            alert("Đã xóa Sản Phẩm khỏi Thực Đơn");
+            }
+        } else {
+            alert("Vui lòng Đăng Nhập để xóa Sản Phẩm");
+            window.location.href = "1-signin.html";
+        }
+    }
+
+    var SPs = [
+            {image: 'menu-1-1.png', name: 'TRÀ ĐÀO CAM SẢ', id: '101', price: '35.000đ', link: '3-menu-1-1.html'},
+            {image: 'menu-1-2.png', name: 'TRÀ HOA CÚT MẬT ONG', id: '102', price: '25.000đ', link: '3-menu-1-2.html'},
+            {image: 'menu-1-3.png', name: 'TRÀ SEN VÀNG KEM CHEESE', id: '103', price: '25.000đ', link: '3-menu-1-3.html'},
+            {image: 'menu-1-4.png', name: 'TRÀ SỮA TRUYỀN THỐNG', id: '104', price: '25.000đ', link: '3-menu-1-4.html'},
+            {image: 'menu-1-5.png', name: 'TRÀ SỮA THAN TRE', id: '105', price: '30.000đ', link: '3-menu-1-5.html'},
+            {image: 'menu-1-6.png', name: 'TRÀ SỮA SOCOLA', id: '106', price: '30.000đ', link: '3-menu-1-6.html'},
+            {image: 'menu-2-1.png', name: 'CAFE ĐEN ĐÁ', id: '201', price: '18.000đ', link: '3-menu-2-1.html'},
+            {image: 'menu-2-2.png', name: 'CAFE SỮA ĐÁ', id: '202', price: '22.000đ', link: '3-menu-2-2.html'},
+            {image: 'menu-3-1.png', name: 'SINH TỐ DÂU', id: '301', price: '30.000đ', link: '3-menu-3-1.html'},
+            {image: 'menu-3-2.png', name: 'SINH TỐ BƠ', id: '302', price: '28.000đ', link: '3-menu-3-2.html'},
+            {image: 'menu-3-3.png', name: 'SINH TỐ XOÀI', id: '303', price: '28.000đ', link: '3-menu-3-3.html'},
+            {image: 'menu-3-4.png', name: 'SINH TỐ CẦU VỒNG', id: '304', price: '35.000đ', link: '3-menu-3-4.html'},
+            {image: 'menu-3-5.png', name: 'NƯỚC ÉP CAM', id: '305', price: '18.000đ', link: '3-menu-3-5.html'},
+            {image: 'menu-3-6.png', name: 'NƯỚC ÉP DƯA HẤU', id: '306', price: '18.000đ', link: '3-menu-3-6.html'},
+            {image: 'menu-3-7.png', name: 'RAU MÁ ĐẬU XANH', id: '307', price: '18.000đ', link: '3-menu-3-7.html'},
+            {image: 'menu-4-1.png', name: 'BÁNH TART TRỨNG', id: '401', price: '18.000đ', link: '3-menu-4-1.html'},
+            {image: 'menu-4-2.png', name: 'BÁNH TART TRÁI CÂY', id: '402', price: '20.000đ', link: '3-menu-4-2.html'},
+            {image: 'menu-4-3.png', name: 'BÁNH MACARON', id: '403', price: '6.000đ', link: '3-menu-4-3.html'},
+            {image: 'menu-4-4.png', name: 'BÁNH QUY SOCOLA CHIP', id: '404', price: '4.000đ', link: '3-menu-4-4.html'},
+            {image: 'menu-4-5.png', name: 'BÁNH SỪNG BÒ', id: '405', price: '15.000đ', link: '3-menu-4-5.html'},
+            {image: 'menu-4-6.png', name: 'BÁNH BÔNG LAN TRỨNG MUỐI', id: '406', price: '25.000đ', link: '3-menu-4-6.html'}
+        ];
+        var results=[];
+        function searchSP() {
+            var input = document.getElementById('searchInput').value;
+            if (input) {
+                // Thực hiện tìm kiếm sản phẩm
+                results = SPs.filter(SP => SP.name.toLowerCase().includes(input.toLowerCase()) || SP.id === input);
+
+                // Lưu kết quả tìm kiếm vào localStorage
+                localStorage.setItem('searchResults', JSON.stringify(results));
+                // localStorage.setItem('currentPage', 1);
+
+                // Chuyển hướng đến trang kết quả tìm kiếm
+                window.location.href = '2-results-menu.html';
+            } else {
+                alert("Vui lòng nhập tên sản phẩm hoặc mã sản phẩm!");
+            }
+        }
+</script>
+
+</html>

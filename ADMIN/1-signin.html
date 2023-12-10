@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vn">
+  
+<head>
+    <meta charset="UTF+8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elynas - ADMIN</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">GIAO DIỆN ADMIN</a>
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang<br> Chủ</a></li>
+            <li><a href="1-qlmenu.html">Quản Lý<br> Sản Phẩm</a></li>
+            <li><a href="1-qluser.html">Quản Lý<br> Người Dùng</a></li>
+            <li><a href="1-qlshoppingcart.html">Quản Lý<br> Đơn Hàng</a></li>
+            <li><a href="1-qlbusiness.html">Quản Lý<br> Kinh Doanh</a></li>
+        </div>
+        <div class="others">
+            <li><a href="1-signin.html" id="getusername">Đăng Nhập</a></li>
+            <button id="signoutbutton" style="display: none; border: none; background: transparent; font-style: italic;" onclick="signout()">Đăng Xuất</button>
+            
+        </div>
+    </header>
+
+
+    <main>
+        <div class="signin">
+            <h2 class="signin-heading">ĐĂNG NHẬP</h2>
+            <div class="signin-input">
+                <input type="text" class="signin-username" placeholder="Tên đăng nhập">
+            </div>
+            <div class="signin-input">
+                <input type="password" class="signin-password" placeholder="Mật khẩu">
+            </div>
+            <div class="signin-signup">
+                <a href="1-signup.html">Đăng ký</a>
+            </div>     
+            <button type="submit" class="signin-button">Đăng Nhập</button>
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="footer">
+            
+            <div class="contactBySocialMedia">
+                <a>Contact us by :</a>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100082839331339" target="_blank"><i><img width="40px" height="40px" src="icon-facebook.png"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCdvAt-M9xRWo4yNJK8S5CKw"target="_blank"><i><img width="40px" height="40px" src="icon-youtube.png"></i></a></li>
+                    <li><a href="https://www.instagram.com/__tienminh.0112__/" target="_blank"><i><img width="40px" height="40px" src="icon-instagram.png"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactByCall">
+                <a href="tel:9031849810">
+                    <i><img width="15px" height="15px" src="icon-call.png"></i>
+                    <span data-class="phone_contact_i" class="link_footer phone_contact_tem color-phone-contact contenteditable"> 0931849810 </span>
+                </a>
+            </div>
+            <div class="contactByMail">
+                <a href="mailto:tienminh.0112.lynn@gmail.com">
+                   <i><img width="15px" height="15px" src="icon-mail.png"></i>
+                   <span data-class="email_contact_i" class="link_footer2 email_contact_tem color-email-contact contenteditable"> tienminh.0112.lynn@gmail.com </span>
+                </a>
+            </div>
+            <div class="copyRight">© 2023 Elynas. All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const signinusername = document.querySelector(".signin-username");
+    const signinpassword = document.querySelector(".signin-password");
+    const signinbutton = document.querySelector(".signin-button");
+    signinbutton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (signinusername.value === "" || signinpassword.value === "") 
+        {
+            alert("vui lòng không để trống");
+        } else 
+            {
+                const userAdmin = JSON.parse(localStorage.getItem(signinusername.value));
+                    if ( userAdmin.username === signinusername.value && userAdmin.password === signinpassword.value) 
+                        {   
+                            const get = { username: signinusername.value}
+                            let login = JSON.stringify(get);
+                            localStorage.setItem('userAdmin', login);
+                            alert("Đăng nhập thành công");
+                            window.location.href = "index.html";
+                        } else 
+                            {
+                                alert("Tên đăng nhập hoặc Mật khẩu SAI");
+                            }
+            }
+    });
+</script>
+
+</html>
