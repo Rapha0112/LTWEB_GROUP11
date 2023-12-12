@@ -977,7 +977,7 @@ header{
     margin-bottom: 20px;
 }
 .payment-history h1{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 15px;
     padding-bottom:15px;
     color: #ff5252;
@@ -1011,5 +1011,55 @@ header{
 }
 
 .payment-history-big.activeB {
+    display: block;
+}
+/* ----------THỐNG KÊ sản phẩm----------- */
+.spham{
+    width:50%;
+    margin: 0 50px;
+    margin-right:50px ;
+    padding: 0 20px 20px 20px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    border: 1px solid #fc8c8c;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.spham h1{
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    color: #ff5252;
+    border-bottom: 1px solid #fc8c8c;
+}
+.spham table{
+    width: 100%;
+}
+.spham table tr th{
+    color: #503a3a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+    font-weight: lighter;
+    border-bottom:1px solid #fc8c8c;
+    font-size: 15px;
+}
+.spham table tr td{
+    color: #666666;
+    font-weight: lighter;
+    margin: auto;
+    width:200px;
+    height: auto; 
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom:10px;
+
+}
+.spham-big {
+    display: none;
+}
+
+.spham-big.activeA {
     display: block;
 }
