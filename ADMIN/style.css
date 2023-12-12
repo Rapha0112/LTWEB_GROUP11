@@ -343,7 +343,10 @@ header{
 }             
 .cartegory-right-bottom{
     justify-content: space-between;
-    margin: 30px 480px;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    margin-left: 50%;
+    margin-right: 50%;
     width: 100%;
 }
 .pagination{
