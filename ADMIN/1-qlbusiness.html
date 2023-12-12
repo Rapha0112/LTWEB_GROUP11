@@ -56,12 +56,140 @@
                             </div>
                             <div class="infomation">
                                 <div class="item"><span>Doanh thu trong tháng:</span> <a>61.425.000đ</a></div>
-                                <div class="item"><span>Lượt truy cập trong tháng:</span> <a>3.852 lượt</a></div>
-                                <div class="item"><span>Đơn hàng trong tháng:</span> <a>642 đơn</a></div>
-                                <div class="item"><span>Đánh giá của khách hàng:</span> <a>4.6 sao</a></div>
                                 <div class="item"><span>Lợi nhuận tính tới hiện tại:</span> <a>543.475.000đ</a></div>
+                                <div class="item"><span>Lượt truy cập trong tháng:</span> <a>3.852 lượt</a></div>
+                                <div class="item"><span>Đánh giá của khách hàng:</span> <a>4.6 sao</a></div>
+                                <div class="item"><span>Đơn hàng trong tháng:</span> <a>642 đơn</a></div>
                             </div>
-                        
+                            <div class="container">
+                                <div class="payment-history">
+                                    <h1>THÔNG KÊ ĐƠN HÀNG</h1>
+                                    <div class="payment-history-big">
+                                    <table>
+                                        <tr>
+                                            <th>Mã Đơn Hàng</th>
+                                            <th>Ngày Đặt</th>
+                                            <th>Thành Tiền</th>
+                                        
+                                            <th>Trạng Thái</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>611</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>22-11-2023</td>
+                                            <td>56.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>612</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>22-11-2023</td>
+                                            <td>78.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>613</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>22-11-2023</td>
+                                            <td>677.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>614</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>25-11-2023</td>
+                                            <td>36.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>615</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>29-11-2023</td>
+                                            <td>140.000đ</td>
+                                            
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>616</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>29-11-2023</td>
+                                            <td>56.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>617</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>29-11-2023</td>
+                                            <td>124.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>618</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>30-11-2023</td>
+                                            <td>200.000đ</td>
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>619</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>30-11-2023</td>
+                                            <td>122.000đ</td>
+                                            
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="history-item-detail">
+                                                    <p>620</p>
+                                                    
+                                                </div>
+                                            </td>
+                                            <td>30-11-2023</td>
+                                            <td>142.000đ</td>
+                                            
+                                            <td><p>Đã giao</p></td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +256,14 @@ var userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
     const userAdmin = JSON.parse(localStorage.getItem('userAdmin'));
     return userAdmin !== null;
 }
+const butTon=document.querySelector(".payment-history")
+    if(butTon){
+        butTon.addEventListener("click",function(){
+            document.querySelector(".payment-history-big").classList.toggle("activeB")
 
+        })
+    
+    }
 </script>
 
 </html>
